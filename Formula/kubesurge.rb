@@ -10,7 +10,7 @@ class Kubesurge < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_darwin_x86_64.tar.gz"
-      sha256 "b5ade2fb922960010feb87eb8fcdcc5ce829c933f55967c94a4c88016654c7fc"
+      sha256 "bbfe8e7a46b838738c21ffc5930df6b367e3d40f45f3729d623c2e2e1c926367"
 
       define_method(:install) do
         bin.install "kubesurge"
@@ -18,7 +18,7 @@ class Kubesurge < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_darwin_arm64.tar.gz"
-      sha256 "b3719870775b0f6252e280bbe5f03112c6705fae84f0252ac3cf51276130da10"
+      sha256 "5e34d12cb07a39be24f4019c888a28d824bc77b99576e81d112c407ae0ab21db"
 
       define_method(:install) do
         bin.install "kubesurge"
@@ -29,14 +29,14 @@ class Kubesurge < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_linux_x86_64.tar.gz"
-      sha256 "872f3ecff4738867cb73dbbd44bb220a5f577c413ad9595fb8e488421aa027de"
+      sha256 "0bc5aa79c160abd0ea27d0b7aa02c5c6a7c6ffa44b1148b526fe0c268196da7e"
       define_method(:install) do
         bin.install "kubesurge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_linux_arm64.tar.gz"
-      sha256 "bf10de1553f1d2a9c509abcb04cc541f3e98c8b5eae0a06eb26f05f939ecd020"
+      sha256 "91deeacce20dab9a73bfaeaba792b087c4e66e14cee52d8f6efad35c6eefef56"
       define_method(:install) do
         bin.install "kubesurge"
       end
