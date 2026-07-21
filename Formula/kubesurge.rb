@@ -5,20 +5,20 @@
 class Kubesurge < Formula
   desc "Surgical, zero-touch live diagnostic utility for hardened Kubernetes clusters."
   homepage "https://github.com/kubesurge/kubesurge"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_darwin_x86_64.tar.gz"
-      sha256 "bbfe8e7a46b838738c21ffc5930df6b367e3d40f45f3729d623c2e2e1c926367"
+      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.1/kubesurge_darwin_x86_64.tar.gz"
+      sha256 "eec73a18061a393a1e286d73027114780c3beb855552eed06c43ce331281c79a"
 
       define_method(:install) do
         bin.install "kubesurge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_darwin_arm64.tar.gz"
-      sha256 "5e34d12cb07a39be24f4019c888a28d824bc77b99576e81d112c407ae0ab21db"
+      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.1/kubesurge_darwin_arm64.tar.gz"
+      sha256 "f4729567168e3559f66e3be5171476cdd96992206003f1a18ea930c7c8ac0827"
 
       define_method(:install) do
         bin.install "kubesurge"
@@ -28,15 +28,15 @@ class Kubesurge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_linux_x86_64.tar.gz"
-      sha256 "0bc5aa79c160abd0ea27d0b7aa02c5c6a7c6ffa44b1148b526fe0c268196da7e"
+      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.1/kubesurge_linux_x86_64.tar.gz"
+      sha256 "378c00246415e2dfc33914326e1c43a657d9c1c6765d1c27df6350f40cb0de72"
       define_method(:install) do
         bin.install "kubesurge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.0/kubesurge_linux_arm64.tar.gz"
-      sha256 "91deeacce20dab9a73bfaeaba792b087c4e66e14cee52d8f6efad35c6eefef56"
+      url "https://github.com/kubesurge/kubesurge/releases/download/v0.1.1/kubesurge_linux_arm64.tar.gz"
+      sha256 "9212e529d58ce35fda41da79ad4525c01ba457a151b5539fa40759d075058af6"
       define_method(:install) do
         bin.install "kubesurge"
       end
